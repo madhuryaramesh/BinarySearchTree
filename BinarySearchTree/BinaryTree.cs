@@ -8,7 +8,6 @@ namespace BinarySearchTree
     class BinaryTree
     {
         public Node root = null;
-
         public void Insert(int i)
         {
             Node newNode = new Node();

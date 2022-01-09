@@ -9,7 +9,6 @@ namespace BinarySearchTree
         public int data;
         public Node LeftNode;
         public Node RightNode;
-
         public Node()
         {
             this.LeftNode = null;
