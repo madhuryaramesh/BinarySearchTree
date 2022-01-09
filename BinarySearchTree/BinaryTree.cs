@@ -8,6 +8,7 @@ namespace BinarySearchTree
     class BinaryTree
     {
         public Node root = null;
+
         public void Insert(int i)
         {
             Node newNode = new Node();
@@ -45,7 +46,6 @@ namespace BinarySearchTree
                 }
             }
         }
-
         public void TraversePreorder(Node root)
         {
             if (root == null)
@@ -56,6 +56,26 @@ namespace BinarySearchTree
             TraversePreorder(root.LeftNode);
 
             TraversePreorder(root.RightNode);
+        }
+        public bool SearchBST(Node root, int value)
+        {
+            if (root == null)
+            {
+                return false;
+            }
+            if (root.data == value)
+            {
+                return true;
+            }
+            else if (root.data > value)
+            {
+                return SearchBST(root.LeftNode, value);
+            }
+            else
+            {
+                return SearchBST(root.RightNode, value);
+            }
+
 
         }
 
